@@ -31,6 +31,7 @@ export default function CatchAllRoute() {
       }
     }
     fetchContent();
+  //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [window.location.pathname]);
   
   // If no page is found, return 
