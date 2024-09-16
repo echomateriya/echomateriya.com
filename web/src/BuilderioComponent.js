@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
 import { useEffect, useState } from "react";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 
@@ -10,7 +7,7 @@ builder.init('e43e03d5f9be4080a3965bd577689f9d');
 // set whether you're using the Visual Editor,
 // whether there are changes,
 // and render the content if found
-export default function CatchAllRoute() {
+export default function BuilderioComponent() {
   const isPreviewingInBuilder = useIsPreviewing();
   const [notFound, setNotFound] = useState(false);
   const [content, setContent] = useState(null);
@@ -53,7 +50,3 @@ export default function CatchAllRoute() {
     </>
   );
 }
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<React.StrictMode><CatchAllRoute /></React.StrictMode>);
