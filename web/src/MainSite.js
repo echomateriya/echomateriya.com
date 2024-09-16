@@ -1,11 +1,25 @@
 import React from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function MainSite() {
   return (
-    <div>
+    <div style={styles.app}>
       <Header />
-      <MainContent />
+      <div style={styles.container}>
+        <div style={styles.animationContainer}>
+          <DotLottieReact
+            src="https://lottie.host/4db68bbd-31f6-4cd8-84eb-189de081159a/IGmMCqhzpt.lottie"
+            loop
+            autoplay
+            style={styles.lottieAnimation}
+          />
+        </div>
+        <div style={styles.contentContainer}>
+          <MainContent />
+        </div>
+      </div>
       <Footer />
+      
     </div>
   );
 }
@@ -13,11 +27,12 @@ export default function MainSite() {
 function Header() {
   return (
     <header style={styles.header}>
-      <h1>Welcome to My Website</h1>
+      <h1>Welcome to Echomateriya</h1>
       <nav>
         <a href="#home" style={styles.navLink}>Home</a>
-        <a href="#about" style={styles.navLink}>About</a>
-        <a href="#contact" style={styles.navLink}>Contact</a>
+        <a href="https://www.behance.net/echomaterib02e/" style={styles.navLink}>Behance</a>
+        <a href="https://echomateriya.tumblr.com/" style={styles.navLink}>Tumblr</a>
+        <a href="https://pin.it/598KK2j" style={styles.navLink}>Pinterest</a>
       </nav>
     </header>
   );
@@ -26,20 +41,37 @@ function Header() {
 function MainContent() {
   return (
     <main style={styles.main}>
-      <section style={styles.textBlock}>
-        <h2>About Us</h2>
-        <p>This is a simple React website demonstrating the basic structure of a webpage.</p>
-      </section>
+        <h2>About Me</h2>
+        <p>Hey, I’m Arthur Bon A.K.A. ECHOMATERIYA. Collected here all links to my profiles.</p>
+      
+      <h2>Links to Social Media and Stores</h2>
 
-      <section style={styles.textBlock}>
-        <h2>Our Mission</h2>
-        <p>To create intuitive and user-friendly web applications using modern technologies.</p>
-      </section>
+      {/* Group 1 */}
+      <div style={styles.buttonGroup}>
+        <a href="https://instagram.com/echomateriya" style={styles.button} target="_blank" rel="noopener noreferrer">
+          INSTAGRAM ECHOMATERIYA
+        </a>
+        <a href="https://instagram.com/echomateriya.store" style={styles.button} target="_blank" rel="noopener noreferrer">
+          INSTAGRAM ECHOMATERIYA.STORE
+        </a>
+        <a href="https://tiktok.com/@echomateriya" style={styles.button} target="_blank" rel="noopener noreferrer">
+          ECHOMATERIYA TIKTOK
+        </a>
+        <a href="https://redbubble.com" style={styles.button} target="_blank" rel="noopener noreferrer">
+          REDBUBBLE
+        </a>
+      </div>
 
-      <section style={styles.textBlock}>
-        <h2>Contact</h2>
-        <p>Feel free to reach out to us at contact@example.com.</p>
-      </section>
+      <h2>19.91</h2>
+      <div style={styles.buttonGroup}>
+        <a href="https://instagram.com/19.91" style={styles.button} target="_blank" rel="noopener noreferrer">
+          19.91 INSTAGRAM
+        </a>
+        <a href="https://tiktok.com/@19.91" style={styles.button} target="_blank" rel="noopener noreferrer">
+          19.91 TIKTOK
+        </a>
+      </div>
+
     </main>
   );
 }
@@ -52,27 +84,57 @@ function Footer() {
   );
 }
 
-// Simple inline styles
 const styles = {
+  app: {
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
+  },
   header: {
     backgroundColor: '#282c34',
+    color: '#fff',
     padding: '20px',
-    color: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
+    position: 'fixed',
+    width: '100%',
+    top: 0,
+    zIndex: 3,
   },
   navLink: {
+    color: '#fff',
+    textDecoration: 'none',
     margin: '0 10px',
-    color: 'white',
-    textDecoration: 'none'
   },
-  main: {
-    padding: '20px'
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '80px', // Offset by header height
+    position: 'relative',
+    minHeight: 'calc(100vh - 80px)', // Adjust for header height
   },
-  textBlock: {
-    marginBottom: '20px',
-    padding: '10px',
-    border: '1px solid #ddd',
-    borderRadius: '5px'
+  animationContainer: {
+    position: 'absolute',
+    zIndex: 1,
+    opacity: 0.5,
+    width: '800px', // Fixed size for animation
+    height: '800px', // Fixed size for animation
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+  },
+  contentContainer: {
+    position: 'relative',
+    zIndex: 2,
+    textAlign: 'center',
+  },
+  mainContent: {
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    padding: '20px',
+    borderRadius: '10px',
+    width: '80%', // Adjust width as needed
+    maxWidth: '600px', // Optional: restrict maximum width
+    margin: '0 auto',
   },
   footer: {
     backgroundColor: '#282c34',
@@ -82,5 +144,24 @@ const styles = {
     position: 'fixed',
     width: '100%',
     bottom: '0'
-  }
+  },
+  buttonGroup: {
+    display: 'flex',
+    flexDirection: 'column', // Align buttons vertically
+    alignItems: 'center', // Center-align buttons horizontally
+    marginBottom: '20px',
+  },
+  button: {
+    display: 'block',
+    margin: '10px 0',
+    padding: '10px 20px',
+    backgroundColor: '#282c34',
+    color: '#fff',
+    textDecoration: 'none',
+    borderRadius: '5px',
+    textAlign: 'center',
+    fontSize: '16px',
+    width: '250px',
+  },
+  
 };
