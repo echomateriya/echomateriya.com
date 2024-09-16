@@ -48,26 +48,26 @@ function MainContent() {
 
       {/* Group 1 */}
       <div style={styles.buttonGroup}>
-        <a href="https://instagram.com/echomateriya" style={styles.button} target="_blank" rel="noopener noreferrer">
+        <a href="https://instagram.com/echomateriya?utm_medium=copy_link" style={styles.button} target="_blank" rel="noopener noreferrer">
           INSTAGRAM ECHOMATERIYA
         </a>
-        <a href="https://instagram.com/echomateriya.store" style={styles.button} target="_blank" rel="noopener noreferrer">
+        <a href="https://instagram.com/echomateriya.store?igshid=Y2IzZGU1MTFhOQ==" style={styles.button} target="_blank" rel="noopener noreferrer">
           INSTAGRAM ECHOMATERIYA.STORE
         </a>
-        <a href="https://tiktok.com/@echomateriya" style={styles.button} target="_blank" rel="noopener noreferrer">
+        <a href="https://www.tiktok.com/@echomateriya" style={styles.button} target="_blank" rel="noopener noreferrer">
           ECHOMATERIYA TIKTOK
         </a>
-        <a href="https://redbubble.com" style={styles.button} target="_blank" rel="noopener noreferrer">
+        <a href="https://www.redbubble.com/people/Ehomateriya/shop?asc=u" style={styles.button} target="_blank" rel="noopener noreferrer">
           REDBUBBLE
         </a>
       </div>
 
       <h2>19.91</h2>
       <div style={styles.buttonGroup}>
-        <a href="https://instagram.com/19.91" style={styles.button} target="_blank" rel="noopener noreferrer">
+        <a href="https://instagram.com/19.91place?igshid=Y2IzZGU1MTFhOQ==" style={styles.button} target="_blank" rel="noopener noreferrer">
           19.91 INSTAGRAM
         </a>
-        <a href="https://tiktok.com/@19.91" style={styles.button} target="_blank" rel="noopener noreferrer">
+        <a href="https://www.tiktok.com/@19.91.place" style={styles.button} target="_blank" rel="noopener noreferrer">
           19.91 TIKTOK
         </a>
       </div>
